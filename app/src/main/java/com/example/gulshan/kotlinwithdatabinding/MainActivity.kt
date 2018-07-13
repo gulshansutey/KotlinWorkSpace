@@ -9,10 +9,10 @@ import com.example.gulshan.kotlinwithdatabinding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         binding.lvm= LandingViewModel()
         binding.executePendingBindings()
     }
